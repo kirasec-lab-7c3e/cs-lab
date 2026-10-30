@@ -1,3 +1,11 @@
 queue_rules:
   - name: default
     merge_conditions: []
+
+pull_request_rules:
+  - name: kirasec-automerge
+    conditions:
+      - base=main
+      - label=gomerge
+    actions:
+      merge:
